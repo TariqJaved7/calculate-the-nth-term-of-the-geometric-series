@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a,r,n,sum,last_term;
+    printf("Enter the first term of the G.P. series: ");
+    scanf("%f", &a);
+    printf("Enter the total numbers in the G.P. series: ");
+    scanf("%d", &n);
+    printf("Enter the common ratio of G.P. series: ");
+    scanf("%f", &r);
+    if (r<1)
+    { sum = (a *(1 - pow(r, n + 1))) / (1 - r);
+      last_term=a*pow(r,n-1);
+      printf("nth term is %f",last_term);}
+     else if (r>1)
+     { sum=(a*(pow(r,n))-1)/(1-r);
+        last_term=a*pow(r,n-1);
+        printf("nth term is %f",last_term);
+     }
+     else
+        {printf("invalid input");}
+}
+
+
